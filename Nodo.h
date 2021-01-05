@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  Nodo.h
  * Author:  ismae
- * Modified: martes, 5 de enero de 2021 15:52:30
+ * Modified: martes, 5 de enero de 2021 16:56:22
  * Purpose: Declaration of the class Nodo
  ***********************************************************************/
 
@@ -19,6 +19,8 @@ public:
    void setDato(Persona newDato);
    Nodo();
    ~Nodo();
+   Nodo getAtras(void);
+   void setAtras(Nodo newAtras);
 
 protected:
 private:

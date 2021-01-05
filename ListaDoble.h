@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  ListaDoble.h
  * Author:  ismae
- * Modified: martes, 5 de enero de 2021 15:59:45
+ * Modified: martes, 5 de enero de 2021 16:51:21
  * Purpose: Declaration of the class ListaDoble
  ***********************************************************************/
 
@@ -16,6 +16,10 @@ public:
    int getSig(void);
    void setSig(int newSig);
    std::string to_string(void);
+   bool esVacia(void);
+   void ingresarInicio(void);
+   void ingresarFinal(void);
+   void Anadir_en_medio(void);
 
 protected:
 private:

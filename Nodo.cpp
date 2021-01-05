@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  Nodo.cpp
  * Author:  ismae
- * Modified: martes, 5 de enero de 2021 15:52:30
+ * Modified: martes, 5 de enero de 2021 16:56:22
  * Purpose: Implementation of the class Nodo
  ***********************************************************************/
 
@@ -74,4 +74,28 @@ Nodo::Nodo()
 Nodo::~Nodo()
 {
    // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Nodo::getAtras()
+// Purpose:    Implementation of Nodo::getAtras()
+// Return:     Nodo
+////////////////////////////////////////////////////////////////////////
+
+Nodo Nodo::getAtras(void)
+{
+   return Atras;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       Nodo::setAtras(Nodo newAtras)
+// Purpose:    Implementation of Nodo::setAtras()
+// Parameters:
+// - newAtras
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void Nodo::setAtras(Nodo newAtras)
+{
+   Atras = newAtras;
 }

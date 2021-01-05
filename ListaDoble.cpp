@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  ListaDoble.cpp
  * Author:  ismae
- * Modified: martes, 5 de enero de 2021 15:59:45
+ * Modified: martes, 5 de enero de 2021 16:51:21
  * Purpose: Implementation of the class ListaDoble
  ***********************************************************************/
 
@@ -59,6 +59,50 @@ void ListaDoble::setSig(int newSig)
 ////////////////////////////////////////////////////////////////////////
 
 std::string ListaDoble::to_string(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::esVacia()
+// Purpose:    Implementation of ListaDoble::esVacia()
+// Return:     bool
+////////////////////////////////////////////////////////////////////////
+
+bool ListaDoble::esVacia(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::ingresarInicio()
+// Purpose:    Implementation of ListaDoble::ingresarInicio()
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void ListaDoble::ingresarInicio(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::ingresarFinal()
+// Purpose:    Implementation of ListaDoble::ingresarFinal()
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void ListaDoble::ingresarFinal(void)
+{
+   // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::Anadir_en_medio()
+// Purpose:    Implementation of ListaDoble::Anadir_en_medio()
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void ListaDoble::Anadir_en_medio(void)
 {
    // TODO : implement
 }
