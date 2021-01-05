@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  ListaDoble.cpp
  * Author:  ismae
- * Modified: martes, 5 de enero de 2021 16:51:21
+ * Modified: martes, 5 de enero de 2021 17:02:55
  * Purpose: Implementation of the class ListaDoble
  ***********************************************************************/
 
@@ -26,30 +26,6 @@ ListaDoble::ListaDoble()
 ListaDoble::~ListaDoble()
 {
    // TODO : implement
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       ListaDoble::getSig()
-// Purpose:    Implementation of ListaDoble::getSig()
-// Return:     int
-////////////////////////////////////////////////////////////////////////
-
-int ListaDoble::getSig(void)
-{
-   return Sig;
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       ListaDoble::setSig(int newSig)
-// Purpose:    Implementation of ListaDoble::setSig()
-// Parameters:
-// - newSig
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void ListaDoble::setSig(int newSig)
-{
-   Sig = newSig;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -105,4 +81,28 @@ void ListaDoble::ingresarFinal(void)
 void ListaDoble::Anadir_en_medio(void)
 {
    // TODO : implement
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::getNodoD()
+// Purpose:    Implementation of ListaDoble::getNodoD()
+// Return:     Nodo
+////////////////////////////////////////////////////////////////////////
+
+Nodo ListaDoble::getNodoD(void)
+{
+   return nodoD;
+}
+
+////////////////////////////////////////////////////////////////////////
+// Name:       ListaDoble::setNodoD(Nodo newNodoD)
+// Purpose:    Implementation of ListaDoble::setNodoD()
+// Parameters:
+// - newNodoD
+// Return:     void
+////////////////////////////////////////////////////////////////////////
+
+void ListaDoble::setNodoD(Nodo newNodoD)
+{
+   nodoD = newNodoD;
 }
