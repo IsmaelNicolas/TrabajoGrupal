@@ -1,2 +1,0 @@
-# TrabajoGrupal
-Listas doblemente enlazadas
