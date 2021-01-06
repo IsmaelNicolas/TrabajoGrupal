@@ -139,5 +139,35 @@ void Lista::imprimirLista()
     }
 
 }
+string Lista::rCorreoL(Persona persona){
+    Nodo* aux = this->lista;
+    Persona auxP;
+    string nombre1,nombre2,apellido1,apellido2;
+    nombre1=persona.getNombre();
+    int cont=0;
+    int n=1;
+
+    if (this->lista == NULL)
+    {
+        return persona.rCorreo();
+    }
+    else
+    {
+        while (cont < this->tamano())
+        {
+            auxP =aux->getPersona();
+            nombre2=auxP.getNombre();
+            if ((auxP.getApellido()==persona.getApellido())&&(nombre1[0]==nombre2[0]))
+                n++;
+            aux = aux->getSiguiente();
+            cont++;
+        }
+
+    }
+    if (n==1)
+        return persona.rCorreo();
+    else
+        return persona.rCorreo(n);
+}
 
 
