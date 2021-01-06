@@ -25,7 +25,8 @@ public:
 
 protected:
 private:
-   Nodo nodoD;
+   Nodo* nodoD;
+   Nodo* listaFinal;
 
 
 };
