@@ -49,3 +49,21 @@ void Lista::insertarInicio(Persona dato)
     }
 
 }
+
+void Lista::insertarFinal(Persona dato)
+{
+
+    if (this->listaVacia())
+    {
+        this->lista = new Nodo(dato, this->listaFinal, this->listaFinal);
+        this->listaFinal = this->lista;
+    }
+    else
+    {
+        Nodo* aux = new Nodo(dato, this->lista, this->listaFinal);
+        this->lista->setAnterior(aux);
+        this->listaFinal->setSiguiente(aux);
+        this->listaFinal = aux;
+    }
+    cout <<"EXITO";
+}
