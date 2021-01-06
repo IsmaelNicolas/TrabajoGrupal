@@ -67,3 +67,31 @@ void Lista::insertarFinal(Persona dato)
     }
     cout <<"EXITO";
 }
+
+Lista::~Lista() {}
+
+
+void Lista::imprimirLista()
+{
+    Nodo* aux = this->lista;
+    Persona persona;
+    int cont=0;
+    if (this->lista == NULL)
+    {
+        cout << "NULL";
+    }
+    else
+    {
+        while (cont < this->tamano())
+        {
+            persona =aux->getPersona();
+            cout<<persona.getCedula()<<"    "<<persona.getApellido()<<"   "<<persona.getNombre()<<"   "<<persona.getEdad()<<"   "<<persona.getCorreo()<<endl;
+            aux = aux->getSiguiente();
+            cont++;
+        }
+
+    }
+
+}
+
+
