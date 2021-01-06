@@ -68,6 +68,52 @@ void Lista::insertarFinal(Persona dato)
     cout <<"EXITO";
 }
 
+void Lista::insertarEntre(Persona dato, int n)
+{
+    if (this->listaVacia())
+    {
+        this->lista = new Nodo(dato, this->listaFinal, this->listaFinal);
+        this->listaFinal = this->lista;
+    }
+    else if (n <= 1 || this->tamano() <= n)
+    {
+        if (n == 1)
+        {
+            this->insertarInicio(dato);
+        }
+        else if (n == this->tamano())
+        {
+            this->insertarFinal(dato);
+        }
+        else
+        {
+            cout << "Fuera de rango" << endl;
+        }
+        system("pause");
+    }
+    else
+    {
+        Nodo* aux = this->lista;
+        Nodo* aux1 = NULL;
+
+        int indice = 0;
+        while (aux != this->listaFinal && indice != n)
+        {
+            aux1 = aux;
+            aux = aux->getSiguiente();
+            indice++;
+        }
+        Nodo* anteriorNodo = aux1->getAnterior();
+        Nodo* aux2 = new Nodo(dato, aux1, anteriorNodo);
+
+        anteriorNodo->setSiguiente(aux2);
+        aux1->setAnterior(aux2);
+
+    }
+    cout <<"EXITO";
+}
+
+
 Lista::~Lista() {}
 
 
