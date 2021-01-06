@@ -7,6 +7,7 @@
 
 #if !defined(__Class_Diagram_1_IngresarDatos_h)
 #define __Class_Diagram_1_IngresarDatos_h
+#include <string>
 
 class IngresarDatos
 {

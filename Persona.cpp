@@ -1,10 +1,3 @@
-/***********************************************************************
- * Module:  Persona.cpp
- * Author:  ismae
- * Modified: martes, 5 de enero de 2021 16:25:44
- * Purpose: Implementation of the class Persona
- ***********************************************************************/
-
 #include "Persona.h"
 
 ////////////////////////////////////////////////////////////////////////
@@ -13,7 +6,7 @@
 // Return:     std::string
 ////////////////////////////////////////////////////////////////////////
 
-std::string Persona::getNombre(void)
+std::string Persona::getNombre()
 {
    return nombre;
 }
@@ -26,9 +19,9 @@ std::string Persona::getNombre(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Persona::setNombre(std::string newNombre)
+void Persona::setNombre(std::string nombre)
 {
-   nombre = newNombre;
+   this->nombre = nombre;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -37,7 +30,7 @@ void Persona::setNombre(std::string newNombre)
 // Return:     std::string
 ////////////////////////////////////////////////////////////////////////
 
-std::string Persona::getApellido(void)
+std::string Persona::getApellido()
 {
    return apellido;
 }
@@ -50,9 +43,9 @@ std::string Persona::getApellido(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Persona::setApellido(std::string newApellido)
+void Persona::setApellido(std::string apellido)
 {
-   apellido = newApellido;
+   this->apellido = apellido;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -61,7 +54,7 @@ void Persona::setApellido(std::string newApellido)
 // Return:     std::string
 ////////////////////////////////////////////////////////////////////////
 
-std::string Persona::getCedula(void)
+std::string Persona::getCedula()
 {
    return cedula;
 }
@@ -74,9 +67,9 @@ std::string Persona::getCedula(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Persona::setCedula(std::string newCedula)
+void Persona::setCedula(std::string cedula)
 {
-   cedula = newCedula;
+   this->cedula = cedula;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -85,7 +78,7 @@ void Persona::setCedula(std::string newCedula)
 // Return:     std::string
 ////////////////////////////////////////////////////////////////////////
 
-std::string Persona::getCorreo(void)
+std::string Persona::getCorreo()
 {
    return correo;
 }
@@ -98,7 +91,7 @@ std::string Persona::getCorreo(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void Persona::setCorreo(std::string newCorreo)
+void Persona::setCorreo(std::string correo)
 {
-   correo = newCorreo;
+   this->correo = correo;
 }

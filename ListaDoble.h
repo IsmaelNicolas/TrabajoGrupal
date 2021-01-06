@@ -1,33 +1,77 @@
-/***********************************************************************
- * Module:  ListaDoble.h
- * Author:  ismae
- * Modified: martes, 5 de enero de 2021 17:02:55
- * Purpose: Declaration of the class ListaDoble
- ***********************************************************************/
-
 #if !defined(__Class_Diagram_1_ListaDoble_h)
 #define __Class_Diagram_1_ListaDoble_h
 
-#include <Nodo.h>
-
+#include "Nodo.h"
+#include <string>
+#include<iostream>
+template<typename T>
 class ListaDoble
 {
 public:
-   ListaDoble();
-   ~ListaDoble();
-   std::string to_string(void);
-   bool esVacia(void);
-   void ingresarInicio(void);
-   void ingresarFinal(void);
-   void Anadir_en_medio(void);
-   Nodo getNodoD(void);
-   void setNodoD(Nodo newNodoD);
+    ListaDoble();
+    ~ListaDoble();
+    bool esVacia();
+    void ingresarInicio(T elemento);
+    void ingresarFinal(T elemento);
+    void ingresarEnMedio(T elemento);
+    void imprimirDesdeInicio();
+    void imprimirDesdeFinal();
 
-protected:
 private:
-   Nodo nodoD;
-
-
+    Nodo<T> *cabeza;
+    Nodo<T> *cola;
+    int size;
 };
+
+//ListaDoble<Persona>
+
+///////////////////////////////////////////////////////////////////////////////
+
+template <typename T>
+ListaDoble<T>::ListaDoble() {
+	size = 0;
+}
+
+template <typename T>
+ListaDoble<T>::~ListaDoble() {
+
+}
+
+
+template <typename T>
+bool ListaDoble<T>::esVacia() {
+    return size == 0;
+}
+
+template <typename T>
+void ListaDoble<T>::ingresarInicio(T elemento) {
+    // ...
+}
+
+template <typename T>
+void ListaDoble<T>::ingresarFinal(T elemento) {
+    // ...
+}
+
+template <typename T>
+void ListaDoble<T>::ingresarEnMedio(T elemento) {
+    // ...
+}
+
+template <typename T>
+void ListaDoble<T>::imprimirDesdeInicio() {
+    Nodo<T> *actual = cabeza;
+
+    while (actual != NULL) {
+        std::cout << actual->getDato();
+        actual = cabeza->getSiguiente();
+    }
+}
+
+template <typename T>
+void ListaDoble<T>::imprimirDesdeFinal() {
+    // ...
+}
+
 
 #endif

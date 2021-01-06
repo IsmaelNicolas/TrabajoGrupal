@@ -4,7 +4,6 @@
  * Modified: martes, 5 de enero de 2021 15:45:04
  * Purpose: Implementation of the class IngresarDatos
  ***********************************************************************/
-
 #include "IngresarDatos.h"
 
 ////////////////////////////////////////////////////////////////////////
