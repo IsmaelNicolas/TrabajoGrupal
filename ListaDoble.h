@@ -55,7 +55,10 @@ void ListaDoble<T>::ingresarFinal(T elemento) {
 
 template <typename T>
 void ListaDoble<T>::ingresarEnMedio(T elemento) {
-    // ...
+	Nodo* tmp = new Nodo();
+	tmp->;
+	tmp->siguiente = NULL;
+	tmp->anterior = NULL;
 }
 
 template <typename T>
