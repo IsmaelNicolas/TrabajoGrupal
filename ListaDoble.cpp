@@ -67,16 +67,24 @@ void ListaDoble::ingresarInicio(void)
 // Return:     void
 ////////////////////////////////////////////////////////////////////////
 
-void ListaDoble::ingresarFinal(void)
-{
-   // TODO : implement
-}
 
-////////////////////////////////////////////////////////////////////////
-// Name:       ListaDoble::Anadir_en_medio()
-// Purpose:    Implementation of ListaDoble::Anadir_en_medio()
-// Return:     void
-////////////////////////////////////////////////////////////////////////
+void Lista::ingresarFinal(Persona dato)
+{
+
+    if (this->esVacia())
+    {
+        this->nodoD = new Nodo(dato, this->listaFinal, this->listaFinal);
+        this->listaFinal = this->nodoD;
+    }
+    else
+    {
+        Nodo* aux = new Nodo(dato, this->nodoD, this->listaFinal);
+        this->nodoD->setAnterior(aux);
+        this->listaFinal->setSiguiente(aux);
+        this->listaFinal = aux;
+    }
+    cout <<"EXITO";
+}
 
 void ListaDoble::Anadir_en_medio(void)
 {
