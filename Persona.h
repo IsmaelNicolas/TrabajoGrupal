@@ -1,43 +1,35 @@
-#if !defined(__Class_Diagram_1_Persona_h)
-#define __Class_Diagram_1_Persona_h
-#include <string>
 #include <iostream>
+#include <sstream>
+#include <string.h>
+#include "Fecha.cpp"
 
-class Persona
-{
+using namespace std;
+class Persona{
+
 public:
-   std::string getNombre();
-   void setNombre(std::string nombre);
-   std::string getApellido();
-   void setApellido(std::string apellido);
-   std::string getCedula();
-   void setCedula(std::string cedula);
-   std::string getCorreo();
-   void setCorreo(std::string correo);
-
-   friend std::ostream& operator<<(std::ostream& os, const Persona& persona) {
-		std::string nombre, apellido, correo, cedula;
-
-		nombre = (persona.nombre.empty() ? "[vacio]" : persona.nombre);
-		apellido = (persona.apellido.empty() ? "[vacio]" : persona.apellido);
-		cedula = (persona.cedula.empty() ? "[vacio]" : persona.cedula);
-		correo = (persona.correo.empty() ? "[vacio]" : persona.correo);
-
-		return os << "{" << std::endl
-				  << "    nombre: " << nombre << "," << std::endl
-				  << "    apellido: " << apellido << "," << std::endl
-				  << "    email: " << correo << "," << std::endl
-				  << "    cedula: " << cedula << "," << std::endl
-				  << "}" << std::endl
-				  << std::endl;
-	}
-
+    Persona();
+    Persona(int,string,string,string,string);
+    void setEdad(int);
+    void setCedula(string);
+    void setNombre(string);
+    void setApellido(string);
+    void setCorreo(string);
+    void setFecha(Fecha);
+    int getEdad();
+    string rCorreo(int);
+    string rCorreo();
+    string getCedula();
+    string getNombre();
+    string getApellido();
+    string getCorreo();
+    Fecha getFecha();
+    void toString();
+    /*virtual ~Persona();*/
 private:
-   std::string nombre;
-   std::string apellido;
-   std::string cedula;
-   std::string correo;
-
+    int edad;
+    string cedula;
+    string nombre ;
+    string apellido;
+    string correo;
+    Fecha fecha;
 };
-
-#endif

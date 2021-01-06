@@ -1,97 +1,91 @@
 #include "Persona.h"
-
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::getNombre()
-// Purpose:    Implementation of Persona::getNombre()
-// Return:     std::string
-////////////////////////////////////////////////////////////////////////
-
-std::string Persona::getNombre()
+Persona::Persona()
 {
-   return nombre;
+
+}
+Persona::Persona(int edad,string cedula, string nombre, string apellido, string correo)
+{
+
+    setEdad(edad);
+    setCedula(cedula);
+    setNombre(nombre);
+    setApellido(apellido);
+    setCorreo(correo);
+}
+void Persona::setEdad(int edad)
+{
+    this->edad=edad;
+}
+void Persona::setCedula(string cedula)
+{
+    this->cedula=cedula;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::setNombre(std::string newNombre)
-// Purpose:    Implementation of Persona::setNombre()
-// Parameters:
-// - newNombre
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void Persona::setNombre(std::string nombre)
+void Persona::setNombre(string nombre)
 {
-   this->nombre = nombre;
+    this->nombre=nombre;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::getApellido()
-// Purpose:    Implementation of Persona::getApellido()
-// Return:     std::string
-////////////////////////////////////////////////////////////////////////
 
-std::string Persona::getApellido()
+void Persona::setApellido(string apellido)
 {
-   return apellido;
+    this->apellido=apellido;
+}
+void Persona::setCorreo(string correo)
+{
+    this->correo=correo;
+}
+void Persona::setFecha(Fecha fecha)
+{
+    this->fecha=fecha;
+}
+int Persona::getEdad()
+{
+    return this->edad;
+}
+string Persona::getNombre()
+{
+    return this->nombre;
+}
+string Persona::getCedula()
+{
+    return this->cedula;
+}
+string Persona::getApellido()
+{
+    return this->apellido;
+}
+string Persona::getCorreo()
+{
+    return this->correo;
+}
+Fecha Persona::getFecha()
+{
+    return this->fecha;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::setApellido(std::string newApellido)
-// Purpose:    Implementation of Persona::setApellido()
-// Parameters:
-// - newApellido
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void Persona::setApellido(std::string apellido)
-{
-   this->apellido = apellido;
+string Persona::rCorreo(){
+    string correo,nombre,apellido,dir;
+    nombre=this->getNombre();
+    apellido=this->getApellido();
+    dir="@espe.edu.ec";
+    correo=nombre[0]+apellido+dir;
+    return correo;
+}
+string Persona::rCorreo(int n){
+    string correo,nombre,apellido,dir;
+    nombre=this->getNombre();
+    apellido=this->getApellido();
+    dir="@espe.edu.ec";
+    correo=nombre[0]+apellido+to_string(n)+dir;
+    return correo;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::getCedula()
-// Purpose:    Implementation of Persona::getCedula()
-// Return:     std::string
-////////////////////////////////////////////////////////////////////////
+/*void Persona::toString(){
+    cout<<cedula<<endl;
+    cout<<nombre<<endl;
+    cout<<apellido<<endl;
+    cout<<correo<<endl;
+    cout<<edad<<endl;
 
-std::string Persona::getCedula()
-{
-   return cedula;
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::setCedula(std::string newCedula)
-// Purpose:    Implementation of Persona::setCedula()
-// Parameters:
-// - newCedula
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void Persona::setCedula(std::string cedula)
-{
-   this->cedula = cedula;
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::getCorreo()
-// Purpose:    Implementation of Persona::getCorreo()
-// Return:     std::string
-////////////////////////////////////////////////////////////////////////
-
-std::string Persona::getCorreo()
-{
-   return correo;
-}
-
-////////////////////////////////////////////////////////////////////////
-// Name:       Persona::setCorreo(std::string newCorreo)
-// Purpose:    Implementation of Persona::setCorreo()
-// Parameters:
-// - newCorreo
-// Return:     void
-////////////////////////////////////////////////////////////////////////
-
-void Persona::setCorreo(std::string correo)
-{
-   this->correo = correo;
-}
+}*/
