@@ -10,16 +10,9 @@
 
 class Menu
 {
-public:
-   void crearMenu(void);
-   Menu(std::string* opciones);
-   ~Menu();
-
-protected:
-private:
-   std::string Opciones;
-
-
+	public:
+		void imprimir_op();
+		void menu_guardar_per();
 };
 
 #endif

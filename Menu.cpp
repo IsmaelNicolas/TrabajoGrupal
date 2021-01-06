@@ -5,39 +5,43 @@
  * Purpose: Implementation of the class Menu
  ***********************************************************************/
 
+#include <string>
+#include <iostream>
+
 #include "Menu.h"
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Menu::crearMenu()
-// Purpose:    Implementation of Menu::crearMenu()
-// Return:     void
-////////////////////////////////////////////////////////////////////////
 
-void Menu::crearMenu(void)
-{
-   // TODO : implement
+void Menu::imprimir_op() {
+    std::cout << "1: Insertar al Inicio" << std::endl;
+    std::cout << "2: Insertar entre" << std::endl;
+    std::cout << "3: Insertar al Final" << std::endl;
+    std::cout << "4: Salir" << std::endl;
 }
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Menu::Menu(std::string* opciones)
-// Purpose:    Implementation of Menu::Menu()
-// Parameters:
-// - opciones
-// Return:     
-////////////////////////////////////////////////////////////////////////
+void Menu::menu_guardar_per() {
+    int op = 0;
+    do {
+        imprimir_op();
+        std::cin >> op;
+        switch (op)
+        {
+        case 1:
 
-Menu::Menu(std::string* opciones)
-{
-   // TODO : implement
-}
+            break;
+        case 2:
 
-////////////////////////////////////////////////////////////////////////
-// Name:       Menu::~Menu()
-// Purpose:    Implementation of Menu::~Menu()
-// Return:     
-////////////////////////////////////////////////////////////////////////
+            break;
+        case 3:
 
-Menu::~Menu()
-{
-   // TODO : implement
+            break;
+        case 4:
+            //salir
+            break;
+        default:
+            std::cout << "opcion incorrecta\n";
+            break;
+        }
+        system("pause");
+        system("cls");
+    } while (op != 4);
 }
