@@ -56,9 +56,33 @@ void ListaDoble<T>::ingresarFinal(T elemento) {
 template <typename T>
 void ListaDoble<T>::ingresarEnMedio(T elemento) {
 	Nodo* tmp = new Nodo();
-	tmp->;
+	tmp->elemento;
 	tmp->siguiente = NULL;
 	tmp->anterior = NULL;
+	if(esVacia()){
+		cabeza=tmp;
+		cola=tmp;
+	}else{
+		if(posicion == 1){
+			ingresarInicio(elemento);
+		}
+		else if (posicion == tamano()+1){
+			ingresarFinal(elemento);
+		}
+		else if (posicion > 1){
+			Nodo *aux;
+			aux=cabeza;
+			for(int i=1 ; i<posicion; i++){
+				aux=aux->siguiente;
+			}
+			aux->anterior->siguiente = tmp;
+			tmp->siguiente = aux;
+			tmp->anterior = aux->anterior;
+			aux->anterior = tmp;
+		}else{
+			cout<<"Posicion no valida"<<endl;
+		}
+	}
 }
 
 template <typename T>
