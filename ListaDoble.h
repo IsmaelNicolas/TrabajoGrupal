@@ -34,7 +34,11 @@ ListaDoble<T>::ListaDoble() {
 
 template <typename T>
 ListaDoble<T>::~ListaDoble() {
-
+    Nodo<T>* nuevo = new Nodo<T>();
+    nuevo->setDato(elemento);
+    nuevo->setSiguiente(cabeza);
+    nuevo->setAnterior(NULL);
+    cabeza = nuevo;
 }
 
 
