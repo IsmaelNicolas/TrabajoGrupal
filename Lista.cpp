@@ -168,6 +168,6 @@ string Lista::rCorreoL(Persona persona){
         return persona.rCorreo();
     else
         return persona.rCorreo(n);
-}
+}0
 
 
