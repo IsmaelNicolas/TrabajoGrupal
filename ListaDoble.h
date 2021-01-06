@@ -18,10 +18,15 @@ public:
     void imprimirDesdeFinal();
 
 private:
+<<<<<<< HEAD
     Nodo<T> *cabeza;
     Nodo<T> *cola;
     int size;
 };
+=======
+   Nodo* nodoD;
+   Nodo* listaFinal;
+>>>>>>> 81c0f5a02b20f1cd71cb7cb107d143c637e5462b
 
 //ListaDoble<Persona>
 
