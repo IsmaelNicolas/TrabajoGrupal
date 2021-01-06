@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 /***********************************************************************
  * Module:  ListaDoble.cpp
  * Author:  ismae
@@ -114,3 +116,4 @@ void ListaDoble::setNodoD(Nodo newNodoD)
 {
    nodoD = newNodoD;
 }
+>>>>>>> 81c0f5a02b20f1cd71cb7cb107d143c637e5462b

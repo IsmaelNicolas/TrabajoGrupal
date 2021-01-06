@@ -1,32 +1,42 @@
-/***********************************************************************
- * Module:  Persona.h
- * Author:  ismae
- * Modified: martes, 5 de enero de 2021 16:25:44
- * Purpose: Declaration of the class Persona
- ***********************************************************************/
-
 #if !defined(__Class_Diagram_1_Persona_h)
 #define __Class_Diagram_1_Persona_h
+#include <string>
+#include <iostream>
 
 class Persona
 {
 public:
-   std::string getNombre(void);
-   void setNombre(std::string newNombre);
-   std::string getApellido(void);
-   void setApellido(std::string newApellido);
-   std::string getCedula(void);
-   void setCedula(std::string newCedula);
-   std::string getCorreo(void);
-   void setCorreo(std::string newCorreo);
+   std::string getNombre();
+   void setNombre(std::string nombre);
+   std::string getApellido();
+   void setApellido(std::string apellido);
+   std::string getCedula();
+   void setCedula(std::string cedula);
+   std::string getCorreo();
+   void setCorreo(std::string correo);
 
-protected:
+   friend std::ostream& operator<<(std::ostream& os, const Persona& persona) {
+		std::string nombre, apellido, correo, cedula;
+
+		nombre = (persona.nombre.empty() ? "[vacio]" : persona.nombre);
+		apellido = (persona.apellido.empty() ? "[vacio]" : persona.apellido);
+		cedula = (persona.cedula.empty() ? "[vacio]" : persona.cedula);
+		correo = (persona.correo.empty() ? "[vacio]" : persona.correo);
+
+		return os << "{" << std::endl
+				  << "    nombre: " << nombre << "," << std::endl
+				  << "    apellido: " << apellido << "," << std::endl
+				  << "    email: " << correo << "," << std::endl
+				  << "    cedula: " << cedula << "," << std::endl
+				  << "}" << std::endl
+				  << std::endl;
+	}
+
 private:
    std::string nombre;
    std::string apellido;
    std::string cedula;
    std::string correo;
-
 
 };
 
