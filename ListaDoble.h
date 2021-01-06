@@ -13,7 +13,7 @@ public:
     bool esVacia();
     void ingresarInicio(T elemento);
     void ingresarFinal(T elemento);
-    void ingresarEnMedio(T elemento);
+    void ingresarEnMedio(T elemento, int posicion);
     void imprimirDesdeInicio();
     void imprimirDesdeFinal();
 
@@ -54,7 +54,7 @@ void ListaDoble<T>::ingresarFinal(T elemento) {
 }
 
 template <typename T>
-void ListaDoble<T>::ingresarEnMedio(T elemento) {
+void ListaDoble<T>::ingresarEnMedio(T elemento, int posicion) {
 	Nodo* tmp = new Nodo();
 	tmp->elemento;
 	tmp->siguiente = NULL;
