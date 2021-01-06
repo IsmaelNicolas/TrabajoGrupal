@@ -25,9 +25,16 @@ void Menu::menu_guardar_per() {
         std::cin >> op;
         switch (op)
         {
-        case 1:
+        case 1: {
+            // datos de la persona
+            Persona persona;
+            persona.setNombre("John");
+            persona.setApellido("Doe");
+            persona.setCedula("xxxxxxxxxxx");
+            persona.setCorreo("johndoe@espe.edu.ec");
 
-            break;
+            lista.ingresarInicio(persona);
+        } break;
         case 2:
 
             break;

@@ -1,7 +1,10 @@
 #include <iostream>
 #include "ListaDoble.h"
 #include "Persona.h"
+#include "Menu.h"
 
 int main() {
-    ListaDoble<Persona> lista;
+	Menu menu;
+	menu.menu_guardar_per();
+    
 }
